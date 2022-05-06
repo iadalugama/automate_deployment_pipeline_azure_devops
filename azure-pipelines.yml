@@ -8,6 +8,7 @@ steps:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: '**.pbix'
     TargetFolder: '$(Agent.TempDirectory)/$(Build.BuildId)'
+- script: echo Hello, world!
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Agent.TempDirectory)/$(Build.BuildId)'
